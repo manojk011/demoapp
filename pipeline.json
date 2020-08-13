@@ -4,6 +4,9 @@
   "helmAppType":"AppType1",
   "artifactory-preprod-credential-id":"Devopsrepo-developer",
   "stages":{
+    "npm-build": {
+      "sonarqube": false
+    },
     "secrets":{
       "environments":{
          "dev":{
