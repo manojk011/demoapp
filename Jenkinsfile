@@ -17,11 +17,34 @@ pipeline {
 
             }
         }
-        stage('Build'){
+        stage('Build') {
+            agent {
+                label 'pipelinenode8'
+            }
+            steps {
+                script {
+                    stageName = 'Build'
+                }
+                        
+                // Call NpmBuilder after all files have been created
+                NPMBuilder(parsedJson)
+            }
+            post {
+                success {
+                    StatusReporter('SUCCESS', stageName, parsedJson)
+                }
+                failure {
+                    StatusReporter('FAILURE', stageName, parsedJson)
+                }
+                unstable {
+                    StatusReporter('UNSTABLE', stageName, parsedJson)
+                }
+            }
+        }
+        stage('AKS Image Build'){
             steps{
                 echo "******************  Build the image  ******************"
                 script {
-                    sh "npm install"
                     //sh "rm -rf node_modules/*/test && rm -rf node_modules/*/test"
                     AppImageBuild(parsedJson)
                     CreateKubeSecrets('dev', parsedJson)
