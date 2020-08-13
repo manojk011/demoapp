@@ -8,14 +8,11 @@ LABEL baseimage='rhel8'
 #RUN yum install -y nodejs
 RUN rm -rf /etc/pki/consumer/key*
 RUN rm -rf /etc/pki/entitlement/*key.pem
-RUN echo "$PWD"
 RUN useradd -u 8877 appuser
 USER appuser
 
 COPY . .
 RUN rm -rf .npmrc
-# RUN echo "$PWD"
-# RUN ls -lart
 
 ENV PORT=6666
 ENV local_config_path=/usr/app/secrets.json
