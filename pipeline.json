@@ -1,4 +1,5 @@
 {
+  "productName": "kpdemoapp",
   "appName":"kpdemoapp",
   "appVersion":"0.0.1",
   "helmAppType":"AppType1",
