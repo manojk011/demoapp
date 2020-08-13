@@ -1,0 +1,50 @@
+{
+  "name": "kp-cloud4js-azuredash",
+  "version": "0.0.3",
+  "description": "node app to check the health of services and perform operations",
+  "main": "server.js",
+  "scripts": {
+    "start": "set NODE_ENV=dev && node server.js",
+    "test": "nyc --reporter=lcov --reporter=text-lcov mocha --exit"
+  },
+  "engines": {
+    "node": "10.7.0",
+    "npm": "6.1.0"
+  },
+  "author": "Manoj Kumar",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://artifactory-bluemix.kp.org/artifactory/api/npm/npm-bluemix-local/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.kp.org/CSG/kp-cloud4js-azuredash.git"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bluebird": "^3.7.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http-status-codes": "^1.4.0",
+    "install": "^0.13.0",
+    "kp-cloud4js-logger": "0.0.27",
+    "kp-cloud4js-pg": "^0.0.1",
+    "lodash": "^4.17.12",
+    "npm": "^6.14.4",
+    "proxyquire": "^2.1.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^7.1.1",
+    "node-mocks-http": "^1.8.1",
+    "nyc": "^15.0.1",
+    "sinon": "^7.5.0"
+  },
+  "resolutions": {
+    "minimist": "^0.2.1",
+    "handlebars": "^4.0.14",
+    "mem": "^4.0.0"
+  }
+}

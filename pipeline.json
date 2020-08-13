@@ -1,0 +1,30 @@
+{
+  "appName":"kpdemoapp",
+  "appVersion":"0.0.1",
+  "helmAppType":"AppType1",
+  "artifactory-preprod-credential-id":"Devopsrepo-developer",
+  "stages":{
+    "secrets":{
+      "environments":{
+         "dev":{
+            "kpConfigURL":"https://kpconfig-np.bmxp.appl.kp.org/kpconfig/kp-cloud4js-azdash-config/dev/master",
+            "KPConfigAuthCredentialID":"azdash-kpconfig-auth",
+            "KPconfigAccessTokenCredentialID":"azdash-kpconfig-token",
+            "namespace":"kp-digital-aks-azdash-dev",
+            "cluster-credential-id":"kp-digital-aks-azdash-dev",
+            "secretsAsFile": true,
+            "secretFileName":"azdashjs-secret"
+         }
+      }
+    },
+    "AKSDeploy":{
+       "deploy-environments":{
+          "dev":{
+             "cluster-credential-id":"kp-digital-aks-azdash-dev",
+             "namespace":"kp-digital-aks-azdash-dev",
+             "manifestPath":"manifests/app/templates"
+          }
+       }
+    }
+  } 
+}
