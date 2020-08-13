@@ -4,8 +4,9 @@
   "description": "node app to check the health of services and perform operations",
   "main": "server.js",
   "scripts": {
-    "start": "set NODE_ENV=dev && node server.js",
-    "test": "nyc --reporter=lcov --reporter=text-lcov mocha --exit"
+    "test": "nyc --reporter=lcov --reporter=text-lcov mocha --exit",
+    "ci-test": "ls",
+    "start": "node server.js"
   },
   "engines": {
     "node": "10.7.0",
