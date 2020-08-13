@@ -1,11 +1,7 @@
-
-#FROM docker-baseimages-local.devopsrepo.kp.org/rhel-ubi:8.1.328
-FROM docker-baseimages-local.devopsrepo.kp.org/node:10.19.0
-LABEL baseimage='rhel8'
-#RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash -
-#RUN yum install -y gcc-c++ make
-
-#RUN yum install -y nodejs
+FROM docker-baseimages-local.devopsrepo.kp.org/redhat/ubi8:8.2
+RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash -
+RUN yum install -y gcc-c++ make
+RUN yum install -y nodejs
 RUN rm -rf /etc/pki/consumer/key*
 RUN rm -rf /etc/pki/entitlement/*key.pem
 RUN useradd -u 8877 appuser
