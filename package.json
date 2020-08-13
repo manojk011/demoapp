@@ -1,6 +1,6 @@
 {
   "name": "kpdemoapp",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "node app to check the health of services and perform operations",
   "main": "server.js",
   "scripts": {
