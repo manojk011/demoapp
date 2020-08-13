@@ -1,5 +1,5 @@
 {
-  "name": "kp-cloud4js-azuredash",
+  "name": "kpdemoapp",
   "version": "0.0.3",
   "description": "node app to check the health of services and perform operations",
   "main": "server.js",
