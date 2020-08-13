@@ -1,7 +1,7 @@
 {
   "productName": "kpdemoapp",
   "appName":"kpdemoapp",
-  "appVersion":"0.0.1",
+  "appVersion":"0.0.2",
   "helmAppType":"AppType1",
   "artifactory-credential-id": "Devopsrepo-developer",
   "artifactory-preprod-credential-id":"Devopsrepo-developer",
