@@ -25,9 +25,9 @@ pipeline {
                 script {
                     stageName = 'Build'
                 }
-                sh 'echo "$pwd"'      
+                //sh 'echo "$pwd"'      
                 // Call NpmBuilder after all files have been created
-                //NPMBuilder(parsedJson)
+                NPMBuilder(parsedJson)
             }
             post {
                 success {
