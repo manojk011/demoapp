@@ -1,5 +1,4 @@
 'use strict'
-const logger = require('kp-cloud4js-logger')();
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -64,13 +63,12 @@ app.use(express.json());
     })
     
     app.listen(port, async function () {
-      logger.info(`listening on port: ${port}`);
+      console.log(`listening on port: ${port}`);
     });
 
   } catch (error) {
     console.log(error)
     let errorMessage = (error.hasOwnProperty('message')) ? error.message : error;
-    logger.error(errorMessage);
     process.exit();
   }
 })();

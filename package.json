@@ -14,13 +14,6 @@
   },
   "author": "Manoj Kumar",
   "license": "ISC",
-  "publishConfig": {
-    "registry": "https://artifactory-bluemix.kp.org/artifactory/api/npm/npm-bluemix-local/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.kp.org/CSG/kp-cloud4js-azuredash.git"
-  },
   "dependencies": {
     "axios": "^0.19.2",
     "bluebird": "^3.7.1",
@@ -29,8 +22,6 @@
     "express": "^4.17.1",
     "http-status-codes": "^1.4.0",
     "install": "^0.13.0",
-    "kp-cloud4js-logger": "0.0.27",
-    "kp-cloud4js-pg": "^0.0.2",
     "lodash": "^4.17.20"
   },
   "devDependencies": {
