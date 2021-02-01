@@ -46,20 +46,23 @@ app.use(express.json());
 
 (async function () {
   try {
-    let getConfig = require('./lib/getConfig')
-    await getConfig.fetchConfiguration()
+//     let getConfig = require('./lib/getConfig')
+//     await getConfig.fetchConfiguration()
     //global["azureConfig"] = require('./.vscode/config.json');
     let port = process.env.PORT || 6666;
 
-    let Postgres_Sqlserver_Routes = require('./routes/Postgres_Sqlserver_Routes');
+//     let Postgres_Sqlserver_Routes = require('./routes/Postgres_Sqlserver_Routes');
    
     // set up the routes
-    app.use(`/${api}/${version}/postgres`, Postgres_Sqlserver_Routes);
+//     app.use(`/${api}/${version}/postgres`, Postgres_Sqlserver_Routes);
     
     // creates the table required to perform CRUD operations for postgres, sql server
-    let table_setup = require('./lib/table_setup');
-    await table_setup.setup();
-
+//     let table_setup = require('./lib/table_setup');
+//     await table_setup.setup();
+    app.get('/', (req, res) => {
+      res.send('Hello World!')
+    })
+    
     app.listen(port, async function () {
       logger.info(`listening on port: ${port}`);
     });
