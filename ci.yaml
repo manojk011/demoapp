@@ -1,9 +1,23 @@
-name: JavaScript CI
-on: [push]
-name: Node.js
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT license.
+name: demoapp-CI
+
+trigger:
+- none
+
+# Trigger the workflow on push to the master branch, and only for changes to lu or json files
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'luis-app/*.lu'
+      - 'luis-app/tests/*.json'
+      
 env:
   AZURE_WEBAPP_NAME: demoapp   # set this to your application's name
-  NODE_VERSION: '14.x'                # set this to the node version to use
+  NODE_VERSION: '14.x' # set this to the node version to use
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
